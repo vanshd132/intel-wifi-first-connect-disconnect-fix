@@ -1,14 +1,22 @@
 # Intel Wi-Fi first-connect disconnect fix
 
-Fix for Windows laptops with Intel Wi-Fi that disconnect about 30 seconds after the **first** connection to a network. The cause is the **Intel Connectivity Network Service**.
+Fix for Windows laptops with Intel Wi-Fi that disconnect about 30 seconds after the **first** connection to a network. If you connect again, the connection works fine. The cause is the **Intel Connectivity Network Service**.
 
 ## Is this your problem?
+
+What it looks like:
+
+1. You connect to a Wi-Fi network.
+2. About **30 seconds later**, Wi-Fi **disconnects by itself**.
+3. You **connect again** to the same network.
+4. This time it **works fine and stays connected**. It does not drop again.
+
+The problem only affects the **first** connection. The second connection is always fine.
 
 You probably have this problem if **all** of these are true:
 
 - You use Windows 10 or 11 on a laptop with an **Intel Wi-Fi card**. It was confirmed on an Intel Wi-Fi 7 BE201 with driver 24.70.0.3.
-- The **first** time you connect to a Wi-Fi network, it connects and then **drops by itself about 30 seconds later**.
-- When you **reconnect**, it works and stays connected.
+- You see the pattern above: the first connection **drops after about 30 seconds**, and **reconnecting fixes it** until the next time you connect.
 - **Other devices** (phones, other laptops) on the same Wi-Fi network have no problems.
 - Before it drops, Windows may show "No internet" even though the network is working.
 
