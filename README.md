@@ -30,7 +30,7 @@ If you see it, this fix applies to you. You can also run the script and choose *
 
 ### Apply the fix
 
-1. Download [`fix-intel-wifi-disconnect.cmd`](fix-intel-wifi-disconnect.cmd). On the file page, click **Download raw file**. You can also use **Code → Download ZIP** and extract it.
+1. Download the repository with **Code → Download ZIP**, then extract it. This keeps the script's Windows (CRLF) line endings. You can also use `git clone`. "Download raw file" gives Unix line endings, so avoid it.
 2. Right-click the file and choose **Run as administrator**. If you just double-click it, it asks for administrator rights itself.
 3. Choose **2. Apply fix**.
 4. Disconnect from your Wi-Fi and connect again to test it.
